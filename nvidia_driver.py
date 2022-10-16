@@ -10,6 +10,7 @@ from bs4 import BeautifulSoup
 if "--url" in sys.argv or "--filename" in sys.argv:
 
     def get_text(text: str, start: str, end: str) -> str:
+        """Returns the string found between first "start" and "end" strings."""
         start_idx = text.find(start) + len(start)
         end_idx = text.find(end, start_idx)
         return text[start_idx:end_idx]

@@ -42,7 +42,7 @@ else
     # Rebuild the initrd
     sudo update-initramfs -u
 
-    wget $URL && sudo chmod +x ./$FILENAME
+    wget $URL && sudo chmod a+x ./$FILENAME
 
     # Add cron job
     if [[ $(sudo crontab -l | wc -c) -eq 0 ]]; then

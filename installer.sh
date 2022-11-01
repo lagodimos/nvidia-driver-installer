@@ -7,10 +7,10 @@ cd $SCRIPT_DIR
 
 SCRIPT_FILENAME="installer.sh"
 
-URL=$(python3 ./nvidia_driver.py --url)
-FILENAME=$(python3 ./nvidia_driver.py --filename)
+URL=$(python3 nvidia_driver.py --url)
+FILENAME=$(python3 nvidia_driver.py --filename)
 
-croncmd="$SCRIPT_DIR/$SCRIPT_FILENAME --continue"
+croncmd="sudo $SCRIPT_DIR/$SCRIPT_FILENAME --continue"
 cronjob="@reboot $croncmd"
 
 if [[ $1 == "--continue" ]]; then
@@ -25,6 +25,7 @@ if [[ $1 == "--continue" ]]; then
 
     # Launch installer in silent mode
     sudo $SCRIPT_DIR/$FILENAME -s
+    
 else
     clear
     echo -e "\nThe NVIDIA driver installation will begin and\nyour computer will restart during this procedure.\n"
@@ -42,6 +43,7 @@ else
     # Rebuild the initrd
     sudo update-initramfs -u
 
+    rm NVIDIA-Linux-*
     wget $URL && sudo chmod a+x ./$FILENAME
 
     # Add cron job

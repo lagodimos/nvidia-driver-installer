@@ -8,14 +8,19 @@
 
 2. Make sure python 3 and a cron implementation is installed and its daemon has been added to your system's init process.
 
-3. Install the required libraries for python (This is optional. The installer will install them for you, if you you have a stable internet connection but you can do it manually to check if there are any errors):
+3. Clone the repository and cd into it:
+```
+git clone https://github.com/Giann1s/nvidia-driver-installer.git && cd ./nvidia-driver-installer
+```
+
+4. Install the required libraries for python (This is optional. The installer will install them for you, if you you have a stable internet connection but you can do it manually to check if there are any errors):
 ```
 pip install -r requirements.txt
 ```
 
-4. Clone the repository and launch the installer:
+4. Launch the installer:
 ```
-git clone https://github.com/Giann1s/nvidia-driver-installer.git && ./nvidia-driver-installer/installer.sh
+chmod +x installer.sh && ./installer.sh
 ```
 
 <br>

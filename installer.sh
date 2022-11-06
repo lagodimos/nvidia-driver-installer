@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-sudo apt install cron -y > /dev/null 2>&1
-
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 cd $SCRIPT_DIR
 
 SCRIPT_FILENAME="installer.sh"
+
+pip install -r requirements.txt
 
 URL=$(python3 nvidia_driver.py --url)
 FILENAME=$(python3 nvidia_driver.py --filename)

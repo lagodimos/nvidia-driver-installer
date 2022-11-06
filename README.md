@@ -18,7 +18,7 @@ pip install -r requirements.txt
 
 4. Launch the installer:
 ```
-chmod +x installer.sh && ./installer.sh
+chmod a+x installer.sh && ./installer.sh
 ```
 
 ### What it does:

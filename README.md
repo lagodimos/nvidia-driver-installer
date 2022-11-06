@@ -1,7 +1,5 @@
 ## Nvidia driver installer
 
-<br>
-
 ### Instructions:
 
 1. Manually check if your graphics card is compatible with the `Latest New Feature Branch Version` of the Nvidia driver (Visit https://www.nvidia.com/en-us/drivers/unix/).
@@ -22,8 +20,6 @@ pip install -r requirements.txt
 ```
 chmod +x installer.sh && ./installer.sh
 ```
-
-<br>
 
 ### What it does:
 Basically downloads the Nvidia driver version that is mentioned above, disables the Nouveau (Open Source) driver, restarts the computer and launches the installer when the boot process is finished using a cron job. (The installation might take a few minutes, depending on your hardware)

@@ -2,7 +2,7 @@
 
 ### Instructions:
 
-1. Manually check if your graphics card is compatible with the `Latest New Feature Branch Version` of the Nvidia driver (Visit https://www.nvidia.com/en-us/drivers/unix/).
+1. Manually check if your graphics card is compatible with the `Latest New Feature Branch Version` of the Nvidia driver. (Visit https://www.nvidia.com/en-us/drivers/unix/)
 
 2. Make sure python 3 and a cron implementation is installed and its daemon has been added to your system's init process.
 

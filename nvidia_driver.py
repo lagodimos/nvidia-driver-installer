@@ -30,7 +30,7 @@ if "--url" in sys.argv or "--filename" in sys.argv:
     result = requests.get(unix_drivers)
     page = BeautifulSoup(result.text, "html.parser")
     p_tag = str(page.find(text="Linux x86_64/AMD64/EM64T").parent.parent)
-    url = get_text(p_tag, ' Latest New Feature Branch Version: <a href="', '">')
+    url = get_text(p_tag, ' Latest Production Branch Version: <a href="', '">')
 
     result = requests.get(url)
     page = BeautifulSoup(result.text, "html.parser")

@@ -14,15 +14,15 @@ if "--url" in sys.argv or "--filename" in sys.argv:
         start_idx = text.find(start) + len(start)
         end_idx = text.find(end, start_idx)
         return text[start_idx:end_idx]
-        
+
     def get_filename(url: str) -> str:
 
-        last_slash_pos = 0 
+        last_slash_pos = 0
 
         for i in range(len(url)):
             if url[i] == "/":
                 last_slash_pos = i
-        
+
         return url[last_slash_pos + 1:]
 
     unix_drivers = "https://www.nvidia.com/en-us/drivers/unix/"
@@ -40,7 +40,7 @@ if "--url" in sys.argv or "--filename" in sys.argv:
     url = f"https://us.download.nvidia.com{url}"
 
     filename = get_filename(url)
-    
+
     if "--filename" in sys.argv:
         print(filename)
     if "--url" in sys.argv:

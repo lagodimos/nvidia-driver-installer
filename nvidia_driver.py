@@ -17,17 +17,17 @@ def get_filename(url: str) -> str:
 
     last_slash_pos = 0
 
-    for i in range(len(url)):
-        if url[i] == "/":
+    for i, character in enumerate(url):
+        if character == "/":
             last_slash_pos = i
 
     return url[last_slash_pos + 1:]
 
 if "--url" in sys.argv or "--filename" in sys.argv:
 
-    unix_drivers = "https://www.nvidia.com/en-us/drivers/unix/"
+    UNIX_DRIVERS = "https://www.nvidia.com/en-us/drivers/unix/"
 
-    result = requests.get(unix_drivers)
+    result = requests.get(UNIX_DRIVERS)
     page = BeautifulSoup(result.text, "html.parser")
     p_tag = str(page.find(string="Linux x86_64/AMD64/EM64T").parent.parent)
     url = get_text(p_tag, ' Latest Production Branch Version: <a href="', '">')

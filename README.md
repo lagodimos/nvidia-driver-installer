@@ -11,7 +11,7 @@
 git clone https://github.com/Giann1s/nvidia-driver-installer.git && cd ./nvidia-driver-installer
 ```
 
-4. Install the required libraries for python (This is optional. The installer will install them for you, if you you have a stable internet connection but you can do it manually to check if there are any errors):
+4. Install the required libraries:
 ```
 pip install -r requirements.txt
 ```

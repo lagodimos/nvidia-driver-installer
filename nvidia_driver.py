@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import os
-os.system("pip install beautifulsoup4 > /dev/null")
 
 import sys
 import requests

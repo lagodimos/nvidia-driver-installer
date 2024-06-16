@@ -8,7 +8,7 @@
 
 3. Clone the repository and cd into it:
 ```
-git clone https://github.com/Giann1s/nvidia-driver-installer.git && cd ./nvidia-driver-installer
+git clone https://github.com/lagodimos/nvidia-driver-installer.git && cd ./nvidia-driver-installer
 ```
 
 4. Install the required libraries:
